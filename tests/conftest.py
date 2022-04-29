@@ -1,6 +1,6 @@
 """This makes the test configuration setup"""
 # pylint: disable=redefined-outer-name
-import logging
+#import logging
 import os
 
 import pytest
@@ -27,7 +27,9 @@ def application():
         #drops the database tables after the test runs
         #db.drop_all()
 
+"""This Function Adds the User"""
 @pytest.fixture()
+
 def add_user(application):
     with application.app_context():
         #new record
